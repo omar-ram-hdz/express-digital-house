@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <title>Heroes | Digital Science</title>
+    <link rel="shortcut icon" href="/images/science.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <h2>Heroes</h2>
+      <% for(let i =0; i<data.length; i++){%>
+        <article class="hero-card">
+          <div>
+            <p><%=data[i].id%></p>
+            <h3><%=data[i].nombre%></h3>
+          </div>
+          <a class="hero-link" href=<%=`/heroes/detail/${data[i].id}`%>>Ver detalles</a>
+          <a class="hero-link" href=<%=`/heroes/bio/${data[i].id}`%>>Ver bio</a>
+          <a class="hero-link" href=<%=`/heroes/bio/${data[i].id}/ok`%>>Ver bio completa</a>
+        </article>
+      <%}%>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

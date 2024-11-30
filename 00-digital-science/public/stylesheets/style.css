@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+  --bg-black: #111111;
+  --blue: #5f9beb;
+}
+ul,
+ol {
+  list-style: none;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+}
+main {
+  padding: 5% 10%;
+}
+footer {
+  width: 100%;
+  padding: 50px 10px;
+  background-color: var(--bg-black);
+  color: #dedede;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+footer li {
+  display: inline;
+}
+footer menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+header {
+  width: 90%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 0.8em;
+  background-color: #111111;
+  border: 2.5px solid #aeaeae;
+  border-radius: 15px;
+  color: white;
+}
+.logotipo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4ch;
+  & a {
+    color: white;
+    transition: color 300ms ease-in;
+  }
+  & a:hover {
+    color: var(--blue);
+  }
+}
+.social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.social.linkedin {
+  background-image: url("/images/linkedin.svg");
+}
+.social.github {
+  background-image: url("/images/github.svg");
+}
+.social.behance {
+  background-image: url("/images/behance.svg");
+}
+.hero-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+.hero-card div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hero-card p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2em;
+}
+.hero-link {
+  font-size: 1.2em;
+}

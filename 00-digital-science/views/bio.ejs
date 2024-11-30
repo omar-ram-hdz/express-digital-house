@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/science.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Heroes | Digital Science</title>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <%if(hero && ok){%>
+      <h2><%= hero.nombre%></h2>
+      <p>Profesión: <%= hero.profesion%></p>
+      <p>País natal: <%= hero.pais%></p>
+      <p><%= hero.resenia%></p>
+      <%}%> <%if(hero && !ok){%>
+      <h2><%= hero.nombre%></h2>
+      <p>Profesión: <%= hero.profesion%></p>
+      <p>País natal: <%= hero.pais%></p>
+      <p>Lamento mucho que no quieras saber más de mi :(</p>
+      <%}%> <%if(err){%>
+      <p>
+        No se encontró al científico indicado, por favor, intenta con otro id
+      </p>
+      <%}%>
+      <a href="/heroes">Regresar</a>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

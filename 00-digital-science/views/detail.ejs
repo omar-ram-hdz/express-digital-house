@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <title>Heroe | Digital Science</title>
+    <link rel="shortcut icon" href="/images/science.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <%if(hero){%>
+      <p>Hola, mi nombre es <%=hero.nombre%> y soy <%=hero.profesion%></p>
+      <%}%> <%if(!hero){%>
+      <p>
+        No se encontró al científico indicado, por favor, intenta con otro id
+      </p>
+      <%}%>
+      <a href="/heroes">Regresar</a>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
