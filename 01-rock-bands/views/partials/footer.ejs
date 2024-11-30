@@ -1,0 +1,57 @@
+<footer>
+  <style>
+    footer {
+      width: 100%;
+      padding: 50px 10px;
+      background-color: #222222;
+      color: #dedede;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    footer li {
+      display: inline;
+    }
+    footer menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .social {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .social.linkedin {
+      background-image: url("/images/linkedin.svg");
+    }
+    .social.github {
+      background-image: url("/images/github.svg");
+    }
+    .social.behance {
+      background-image: url("/images/behance.svg");
+    }
+  </style>
+  <p>Omar Ramírez Hernandez</p>
+  <menu>
+    <li>
+      <a
+        href="https://linkedin.com/in/omar-ram-hdz"
+        class="social linkedin"
+      ></a>
+    </li>
+    <li>
+      <a href="https://github.com/omar-ram-hdz" class="social github"></a>
+    </li>
+    <li>
+      <a href="https://behance.net/omar-ram-hdz" class="social behance"></a>
+    </li>
+  </menu>
+</footer>

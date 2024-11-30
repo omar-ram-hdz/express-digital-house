@@ -1,0 +1,9 @@
+<section class="bands">
+  <%if(data){%> <% for(let i=0;i< data.length;i++){ %>
+<article class="card-band">
+  <img src=<%=data[i].cover%> alt=<%=data[i].nombre%> />
+  <h3><%=data[i].nombre%></h3>
+  <a href= <%=`/bands/${data[i].id}`%>> Ver ></a>
+</article>
+<%}%> <%}%>
+</section>

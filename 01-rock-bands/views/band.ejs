@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%if(!error && band.nombre){%>
+    <title><%=band.nombre%> | Bands</title>
+    <%}if(error){%>
+    <title>Bands</title>
+    <%}%>
+    <link rel="shortcut icon" href="/images/guitar.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <%if(!error && band){%>
+      <img src=<%=band.cover%> alt=<%= band.nombre%> class="band-cover">
+      <h2><%=band.nombre%></h2>
+      <%= `/genders/${band.genero}` %>
+      <p>Genero: <a href=<%=`/genders/${band.genero}`%> ><%=band.genero%></a></p>
+      <p>Número de integrantes: <%=band.integrantes%> </p>
+      <p>Top canciones:</p>
+      <ol>
+        <%for(let j=0;j<band.topCanciones.length;j++){ %>
+          <li> <%=band.topCanciones[j]%> </li>
+        <%}%>
+      </ol>
+        <a href=<%=band.video%> >Ver en Youtube</a>
+      <%}%> <%if(error){%>
+      <h2>Ocurrió un error</h2>
+      <p><%=messageError%></p>
+      <%}%>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

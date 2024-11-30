@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bands</title>
+    <link rel="shortcut icon" href="/images/guitar.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <h2>Bandas</h2>
+      <%- include("./partials/bands.ejs") %>
+    </main>
+    <!-- 
+      - Home -> Lista de bandas
+      - Band :id -> Banda
+      - Géneros -> Lista de géneros
+      - Genero :id -> Bandas de un genero específico
+    -->
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

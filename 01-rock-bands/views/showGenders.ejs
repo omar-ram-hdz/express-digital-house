@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genders | Bands</title>
+    <link rel="shortcut icon" href="/images/guitar.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <h2>Géneros</h2>
+      <ul>
+        <%for(let i=0;i<genders.length;i++){%>
+          <li>
+            <a href=<%=`/genders/${genders[i]}`%> >
+              <%= genders[i]%>
+            </a>
+          </li>
+        <%}%>
+      </ul>
+    </main>
+    <!-- 
+      - Home -> Lista de bandas
+      - Band :id -> Banda
+      - Géneros -> Lista de géneros
+      - Genero :id -> Bandas de un genero específico
+    -->
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
